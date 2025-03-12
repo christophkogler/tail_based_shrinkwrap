@@ -1,6 +1,9 @@
 # Tail-Based Shrinkwrap for Bones
 
-A Blender add-on for creating non-destructive, tail-based shrinkwrap setups for bones, using constrained empties as IK proxies. This workflow is useful for rigging scenarios where you want your bone tails to follow a surface precisely.
+A Blender add-on for creating non-destructive, tail-based shrinkwrap setups for bones, using constrained empties as IK proxies. This workflow is useful for rigging scenarios where you want your bone tails to follow a surface precisely. 
+
+![Before/after image](media/example.jpg)
+
 
 ## Table of Contents
 - [Features](#features)
@@ -10,11 +13,12 @@ A Blender add-on for creating non-destructive, tail-based shrinkwrap setups for 
 - [License](#license)
 
 ## Features
-- **Automatic Empty Creation**: The add-on automatically creates empties at the bone tails and organizes them into collections.
-- **Limit Distance + Shrinkwrap Constraints**: Each empty gets constraints to preserve parent-child relationships and follows a specified mesh surface.
-- **IK (and Optional Damped Track) Setup**: Adds an IK constraint to each bone, and optionally add a Damped Track constraint.
+- **Adjustable default distance**: Scale the default distance of the shrinkwraps up or down. This is relative to the bone length.
+- **Damped Track**: Optionally add a Damped Track constraint.
 - **Baking**: Easily bake the resulting motion of bones driven by the empties into standard F-Curves.
-- **Clearing**: One-click removal of all related empties and constraints once you’re done, applying any visual transforms first.
+- **Clearing**: One-click removal of all related empties and constraints once you’re done, applying any visual transforms first. 
+
+![Add-on panel preview](media/panel.PNG)
 
 ## Compatibility
 - **Blender Version**: Developed and tested in Blender 4.3.2 
@@ -50,6 +54,11 @@ A Blender add-on for creating non-destructive, tail-based shrinkwrap setups for 
 6. **Optional**:  
    - **Bake** your animation under *Other* → **Bake Tail Shrinkwrap** to convert the constraints into keyframes for the selected frame range.
    - **Clear** the tail shrinkwrap (removing empties and constraints) under *Other* → **Clear Tail Shrinkwrap** if you no longer need the dynamic constraints.
+
+
+## Examples
+![problem statement and solution](media/explanation.gif)
+![How to apply and enable the rigging](media/setup.gif)
 
 ## License
 This add-on is distributed under the terms of the [GPLv3 License](LICENSE).
